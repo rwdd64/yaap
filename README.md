@@ -1,9 +1,16 @@
-# argparser - A C-program argument parser
+# argparser - A library for C-program argument parsing
 
 ## Building
+
+```sh
 $ mkdir build
 $ cd build
 $ cmake ..
 $ make
+```
 
-The static library will be inside /lib folder
+The static library will be inside the `/lib` folder.
+
+## Dependencies
+
+- cmake (>=3.16)
