@@ -23,8 +23,16 @@ int parse_args(argparser_t* parser, int argc, char** argv, result_t* result) {
                         parser->options[j].identifier, i);
                 printf("\r\n");
 #endif
+                if (parser->options[j].type == OPT_BOOL) {
+                    int* val = (int*)malloc(sizeof(int));
+                    *val = 1;
+                    result->values[j] = val;
+                } else if (parser->options[j].type == OPT_VAL) {
+                    result->values[j] = &argv[i+1];
+                    i++;
+                }
+                break;
             }
         }
     }
 }
-
