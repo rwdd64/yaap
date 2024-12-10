@@ -20,6 +20,5 @@ typedef struct {
     int option_count;
 } argparser_t;
 
-argparser_t* new_parser();
 int add_option(argparser_t* parser, option_t option);
 int parse_args(argparser_t* parser, int argc, char** argv);

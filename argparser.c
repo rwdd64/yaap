@@ -4,11 +4,6 @@
 
 #include "argparser.h"
 
-argparser_t* new_parser() {
-    argparser_t parser;
-    return memset(&parser, 0, sizeof(parser));
-}
-
 int add_option(argparser_t* parser, option_t option) {
     parser->options[parser->option_count++] = option;
 #if defined DEBUG
