@@ -8,8 +8,8 @@ typedef enum {
 } token_type_e;
 
 typedef enum {
-    OPT_SINGLE,
-    OPT_ARG,
+    OPT_BOOL,
+    OPT_VAL,
 } option_type_e;
 
 typedef struct {
