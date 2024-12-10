@@ -7,9 +7,9 @@
 int add_option(argparser_t* parser, option_t option) {
     parser->options[parser->option_count++] = option;
 #if defined DEBUG
-    printf("Added option '%s'\n", option.identifier);
-    printf("Type: '%d'\n", (int)option.type);
-    printf("Option Count: '%d'\n", parser->option_count);
+    printf("Added option %s\n", option.identifier);
+    printf("Type: %d\n", (int)option.type);
+    printf("Option Count: %d\n", parser->option_count);
     printf("\r\n");
 #endif
 }
