@@ -20,5 +20,9 @@ typedef struct {
     int option_count;
 } argparser_t;
 
+typedef struct {
+    void* values[MAX_OPTIONS];
+} result_t;
+
 int add_option(argparser_t* parser, option_t option);
-int parse_args(argparser_t* parser, int argc, char** argv);
+int parse_args(argparser_t* parser, int argc, char** argv, result_t* result);

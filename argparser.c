@@ -14,7 +14,7 @@ int add_option(argparser_t* parser, option_t option) {
 #endif
 }
 
-int parse_args(argparser_t* parser, int argc, char** argv) {
+int parse_args(argparser_t* parser, int argc, char** argv, result_t* result) {
     for (int i = 1; i < argc; ++i) {
         for (int j = 0; j < parser->option_count; ++j) {
             if (strcmp(argv[i], parser->options[j].identifier) == 0) {
