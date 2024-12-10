@@ -14,3 +14,5 @@ string(TOLOWER "${CMAKE_BUILD_TYPE}" build_type)
 if (build_type STREQUAL "debug")
     target_compile_definitions(${PROJECT_NAME} PRIVATE DEBUG)
 endif()
+
+target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
