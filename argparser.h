@@ -1,5 +1,7 @@
 #pragma once
 
+#define MAX_OPTIONS 256
+
 typedef enum {
     TKN_ARG,
     TKN_OPT,
@@ -16,7 +18,7 @@ typedef struct {
 } option_t;
 
 typedef struct {
-    option_t options[256];
+    option_t options[MAX_OPTIONS];
     int option_count;
 } argparser_t;
 
