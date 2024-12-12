@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
-project(argparser)
+project(yaap)
 
-add_library(${PROJECT_NAME} STATIC argparser.c)
+add_library(${PROJECT_NAME} STATIC ${PROJECT_NAME}.c)
 target_include_directories(${PROJECT_NAME}
     INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR})

@@ -1,4 +1,4 @@
-# argparser - A library for C-program argument parsing
+# yaap - Yet Another Argument Parser: A library for C-program argument parsing
 
 ## Building
 
