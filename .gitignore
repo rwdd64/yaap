@@ -1,4 +1,5 @@
-build/
 design/
 .*
-*.*~
+*.o
+*.out
+*.exe
