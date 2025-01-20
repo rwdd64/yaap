@@ -1,25 +1,21 @@
-#ifdef YAAP_IMPLEMENTATION
-#include <string.h>
-#include <stdlib.h>
-#ifdef DEBUG
-#include <stdio.h>
-#endif
+#ifndef INCLUDE_YAAP_H
+#define INCLUDE_YAAP_H
 
 typedef enum {
 	OPT_BOOL,
 	OPT_VALUE
 } yaap_opt_type_e;
 
-typedef struct {
-	char* identifier;
-	yaap_opt_type_e type;
-	void* output_ptr;
-} yaap_option_t;
-
 typedef enum {
     POSIX_STYLE,
     GNU_STYLE
 } yaap_parser_style_e;
+
+typedef struct {
+	yaap_opt_type_e type;
+	char* identifier;
+	void* output_ptr;
+} yaap_option_t;
 
 typedef struct {
 	int max_options;
@@ -33,6 +29,17 @@ int yaap_reg_opt(yaap_parser_t* parser_ptr, char* identifier, int opt_type, void
 int yaap_run(yaap_parser_t* parser_ptr, int argc, char** argv);
 int yaap_parser_init(yaap_parser_t* parser_ptr);
 int yaap_parser_clean(yaap_parser_t* parser_ptr);
+
+#endif // INCLUDE_YAAP_H
+
+#ifdef YAAP_IMPLEMENTATION
+
+#include <string.h>
+#include <stdlib.h>
+
+#ifdef DEBUG
+#include <stdio.h>
+#endif
 
 int yaap_reg_opt_struct(yaap_parser_t* parser_ptr, yaap_option_t option) {
     if (parser_ptr == NULL) {
@@ -103,4 +110,4 @@ int yaap_parser_clean(yaap_parser_t* parser_ptr) {
     return 0;
 }
 
-#endif
+#endif // YAAP_IMPLEMENTATION
