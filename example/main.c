@@ -1,10 +1,11 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 
-#include "..\yaap.h"
+#define YAAP_IMPLEMENTATION
+#include "../yaap.h"
 
 int main(int argc, char** argv) {
-    int a;
+    bool a = false;
     char* b = NULL;
 
     yaap_parser_t parser = {
@@ -28,5 +29,5 @@ int main(int argc, char** argv) {
     printf("Option 1: %d\n", a);
     printf("Option 2: %s\n", b==NULL ? "Null" : b);
 
-    return EXIT_SUCCESS;
+    return 0;
 }
