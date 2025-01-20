@@ -2,7 +2,7 @@
 
 ## Building
 
-No building necessary! Just declare that it's an implementation and include the header file.
+No building necessary! Just declare you want the functions' implementations and include the header file.
 
 ```c
 #define YAAP_IMPLEMENTATION
