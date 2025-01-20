@@ -1,4 +1,4 @@
-TARGET=app.exe
+TARGET=app
 CFLAGS=-Wall -Wextra -Wpedantic
 
 FILES=$(basename $(wildcard *.c))
