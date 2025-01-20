@@ -6,7 +6,9 @@ No building necessary! Just declare that it's an implementation and include the 
 
 ```c
 #define YAAP_IMPLEMENTATION
-#include "yaap.h";
+#include "yaap.h"
+
+// Your code here...
 ```
 
 ## Dependencies
